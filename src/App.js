@@ -10,6 +10,7 @@ import { productInputs, userInputs } from "./formSource";
 import "./style/dark.scss";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
+import TrackRecord from "./components/TrackRecord/TrackRecord";
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
@@ -24,6 +25,7 @@ function App() {
             <Route path="new-sponsor" element={<SponsorDetails />} />
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
+            <Route path="new-sponsor/trackrecord" element={<TrackRecord />} />
             <Route path="users">
               <Route index element={<List />} />
               <Route path=":userId" element={<Single />} />
